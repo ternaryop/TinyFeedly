@@ -35,7 +35,7 @@ buildscript {
         artifactId: 'feedly',
         bintrayRepoName: 'TinyFeedly',
         desc: 'Feedly Api Library focused on Android integration',
-        website: 'https://github.com/dafi/tinyfeedly'
+        website: 'https://github.com/ternaryop/tinyfeedly'
     ]
 
     repositories {
