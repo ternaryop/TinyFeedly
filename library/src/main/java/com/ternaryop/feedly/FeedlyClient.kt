@@ -15,6 +15,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query
 import retrofit2.http.QueryMap
+import java.io.IOException
 import java.net.HttpURLConnection
 
 /**
@@ -129,7 +130,7 @@ class FeedlyClient(var accessToken: String, userId: String, private val refreshT
                     if (error.hasTokenExpired()) {
                         throw TokenExpiredException(error.errorMessage!!)
                     }
-                    throw RuntimeException("Error $responseCode: ${error.errorMessage}")
+                    throw IOException("Error $responseCode: ${error.errorMessage}")
                 }
             }
             response
